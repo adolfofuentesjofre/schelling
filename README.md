@@ -1,4 +1,4 @@
-# Clasificación y Regresión con Tensorflow
+# Schelling: Dynamic Model of Segregation
 
 El artículo “Dynamic Model of Segregation” de Schelling ha sido citado más de 6500 veces de acuerdo con Google Scholar y representa una obra seminal en el campo de teoría de juegos, modelos basados en agentes y simulación del comportamiento humano. Como consecuencia una gran cantidad de disciplinas desde la economía hasta las ciencias sociales computacionales se han referido a este artículo. 
 
@@ -22,12 +22,9 @@ Schelling desarrolló tres modelos: Modelo de distribución lineal, modelo de di
 El modelo de distribución lineal considera dos tipos de agentes y los posiciona en una línea que comienza aleatoriamente distribuida. Dado un agente focal se considera como “vecindario” los ocho vecinos más cercanos de este agente. De esta manera se puede medir que agentes están satisfechos o insatisfechos con su vecindario evaluando que fracción de vecinos más cercanos pertenece a su mismo grupo. Los vecinos insatisfechos son aquellos que superan un umbral de satisfacción y tienen un vecindario con una mayor cantidad de personas de otro grupo. Aquellos vecinos insatisfechos podrán cambiarse a una ubicación diferente (Ubareviciene & Tammaru, 2022).
 El modelo de distribución de área y el modelo de vecindario delimitado introduce la noción de espacio geográfico, donde una ciudad es modelada teóricamente como un conjunto de pequeños cuadrados similar a un tablero de ajedrez de NxN ubicaciones. Al igual que el modelo lineal ambos grupos (B y R) comienzan aleatoriamente distribuidos, sin embargo, un porcentaje de las ubicaciones (E%) estará vacías. Las reglas de estos modelos son similares al modelo lineal donde cada agente k tiene un parámetro de satisfacción Sk dado por la fracción de vecinos del mismo tipo. Los agentes insatisfechos son aquellos que superan un umbral y tienen un vecindario con una mayor cantidad de personas de otro grupo, aquellos vecinos insatisfechos podrán cambiarse a una ubicación diferente (fig.1). 
 
-**Video/Imagen**
 
 ![Screenshot](Imagenes/25.jpg)
-
-**Object Detection**
-
+**Fig 1**
 
 El modelo de vecindario delimitado introduce el concepto de tolerancia, que representa una regla adicional, que determina la fracción máxima de vecinos de otro grupo que cada agente esta dispuesto a aceptar antes de cambiarse de ubicación. Esto significa que estarán satisfechos si viven en un vecindario que este conformado con un T% o más de su propio grupo. La dinámica de cambiarse de ubicación continuará hasta que se encuentre un equilibrio estable donde todos los agentes estén satisfechos.
 Metodología
@@ -40,3 +37,4 @@ Se utilizarán los siguientes valores para cada parámetro:
 El sistema se inicializa de manera aleatoria con los parámetros previamente definidos (fig.1). Posteriormente se ejecuta la simulación desde un estado inicializado aleatoriamente con un alto grado de integración hacia configuraciones cada vez más segregadas después de 1000 iteraciones. Se evaluará los umbrales de satisfacción de 25%, 40%, 60% y 75% (fig.2).
 
 ![Screenshot](Imagenes/Resumen.png)
+**Fig 2**

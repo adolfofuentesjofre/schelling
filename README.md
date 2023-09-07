@@ -24,6 +24,7 @@ El modelo de distribución de área y el modelo de vecindario delimitado introdu
 
 
 ![Screenshot](Imagenes/25.jpg)
+
 **Fig 1**
 
 El modelo de vecindario delimitado introduce el concepto de tolerancia, que representa una regla adicional, que determina la fracción máxima de vecinos de otro grupo que cada agente esta dispuesto a aceptar antes de cambiarse de ubicación. Esto significa que estarán satisfechos si viven en un vecindario que este conformado con un T% o más de su propio grupo. La dinámica de cambiarse de ubicación continuará hasta que se encuentre un equilibrio estable donde todos los agentes estén satisfechos.
@@ -37,4 +38,5 @@ Se utilizarán los siguientes valores para cada parámetro:
 El sistema se inicializa de manera aleatoria con los parámetros previamente definidos (fig.1). Posteriormente se ejecuta la simulación desde un estado inicializado aleatoriamente con un alto grado de integración hacia configuraciones cada vez más segregadas después de 1000 iteraciones. Se evaluará los umbrales de satisfacción de 25%, 40%, 60% y 75% (fig.2).
 
 ![Screenshot](Imagenes/Resumen.png)
+
 **Fig 2**
